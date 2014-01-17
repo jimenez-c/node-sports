@@ -1,0 +1,189 @@
+<sports>
+  <sport>
+    <title>Athlétisme</title>
+    <slug>athletisme</slug>
+    <description>L'athlétisme est l'un des plus vieux handisports : la première course de fauteuils roulants aurait été organisée en 1946 à l'hôpital de Stoke Mandeville, au Royaume-Uni. C'est devenu un sport paralympique depuis 1960. Les règles sont adaptées pour tenir compte du handicap des sportifs. L'athlétisme regroupe des épreuves de course, de saut, de lancer, ainsi que le pentathlon et le marathon. Les athlètes sont classés dans une catégorie en fonction de leur handicap.</description>
+    <links>
+      <link>http://fr.wikipedia.org/wiki/Athl%C3%A9tisme_%28handisport%29</link>
+      <link>http://www.paralympic.org/Athletics</link>
+    </links>
+    <clubs>
+      <club>
+        <name>Bayard Argentan</name>
+        <logo>bayard-argentan.png</logo>
+        <manager>Emeric MARTIN</manager>
+        <address>68 Route de Sées - 61200 ARGENTAN</address>
+        <phone>02.33.39.57.69</phone>
+        <phone>06.81.39.55.24</phone>
+        <mail>martin.emeric@wanadoo.fr</mail>
+        <website>http://athlebayard61.canalblog.com/</website>
+      </club>
+      <club>
+        <name>Sporting Club d'Hérouville</name>
+        <address>2 rue Guyon de Guercheville - 14200 HEROUVILLE SAINT CLAIR</address>
+        <phone>06.10.86.37.86</phone>
+        <mail>cathcaillon@hotmail.com</mail>
+      </club>
+    </clubs>
+  </sport>
+  <sport>
+    <title>Basket</title>
+    <slug>Basket</slug>
+    <description>Le basket-ball en fauteuil roulant est un des handisports les plus populaires : il est actuellement pratiqué au niveau national dans plus de 80 pays. Le développement de ce sport a été encouragé par les Pan Am Jets, une équipe américaine constituée des employés de la compagnie aérienne américaine Pan Am Airlines. Comme l'athlétisme handisport, c'est un sport officiel des jeux paralympiques depuis 1960.
+
+		Les équipes sont constituées de 5 membres. Les parties se déroulent sur un terrain de basket-ball classique : même hauteur de panier, même ballon. Les joueurs doivent dribbler toutes les deux poussées données au fauteuil. On attribue une classe à chaque joueur en fonction de son handicap. A chaque classe correspond un certain nombre de points. Le nombre total de points d'une équipe ne peut pas excéder 14 en international. Ces règles ont été établies par l'IWBF.</description>
+    <links>
+      <link>http://fr.wikipedia.org/wiki/Basket-ball_en_fauteuil_roulant</link>
+    </links>
+    <clubs>
+      <club>
+        <name>Caen Basket Handisport</name>
+        <address>Gymnase Jean Moulin - Rue de Brocéliande - 14000 CAEN</address>
+        <phone>06.73.56.99.31</phone>
+        <mail>basket@gmail.com</mail>
+        <website>http://www.caen-basket-handisport.com</website>
+        <logo>shoot.jpg</logo>
+      </club>
+    </clubs>
+  </sport>
+  <sport>
+    <title>Cyclisme</title>
+    <slug>cyclisme</slug>
+    <description>A la fin des années 90 apparaît le hand-bike : c’est une sorte de tricycle dans lequel la personne est allongée et pédale en utilisant ses mains. Cette invention a permis à des milliers de personnes, atteintes de toutes sortes de handicaps, de pratiquer une forme de cyclisme adaptée à leurs capacités. Une version en tandem existe également, permettant aux déficients visuels de rouler avec un accompagnateur. Cependant, le cyclisme handisport ne se limite pas au hand-bike, puisque les personnes atteintes d’un handicap léger peuvent évidemment utiliser un vélo classique, même en compétition.
+
+		En compétition, on distingue le cyclisme sur piste et le cyclisme sur route. Le premier se pratique dans un vélodrome, tandis que le second se pratique en extérieur. Il y a plusieurs épreuves liées au cyclisme handisport : les brevets, les rallyes, et les randonnées. Les courses de hand-bike peuvent aller de 20 à 40 km.</description>
+    <links>
+      <link>http://fr.wikipedia.org/wiki/Cyclisme_handisport</link>
+      <link>http://www.handisport.org/content/competition/cyclisme.php</link>
+      <link>http://www.ouest-france.fr/sport/dma_une_-Championnat-de-France-de-cyclisme-handisport-ce-week-end-a-Bayeux_44096-2091767-fils_filDMA.Htm</link>
+    </links>
+    <clubs>
+      <club>
+        <name>Amicale cycliste de Bayeux</name>
+        <address>Place de la gare – 14400 BAYEUX</address>
+        <phone>06.74.64.43.03</phone>
+        <mail>michel.david11@orange.fr</mail>
+        <website>www.amicale-cycliste-bayeux.fr</website>
+      </club>
+      <club>
+        <name>Sport Handi Nature</name>
+        <address>135 rue de Bayeux – 14000 CAEN</address>
+        <hours>Loisir : Le samedi après-midi de 13h30 à 17h30
+				Horaires Compétition En semaine suivant les disponibilités.</hours>
+        <phone>06.74.66.34.50</phone>
+        <mail>gaby.bourgault@gmail.com</mail>
+        <website>www.sporthandinature.fr</website>
+      </club>
+      <club>
+        <name>Créances Handisports</name>
+        <manager>Jean-Paul LEPLUMAY</manager>
+        <address>432 Boulevard de la Mer – 50710 CREANCES</address>
+        <hours>Loisir : Le samedi après-midi de 13h30 à 17h30
+				Horaires Compétition En semaine suivant les disponibilités.</hours>
+        <phone>02.33.46.25.08</phone>
+        <phone>06.74.66.34.50</phone>
+        <mail>jeanpaul.leplumey@sfr.fr</mail>
+        <website>www.creances-handisport.fr</website>
+      </club>
+    </clubs>
+  </sport>
+  <sport>
+    <title>Equitation</title>
+    <slug>equitation</slug>
+    <description>L’équitation handisport est accessible à presque tous les types de handicap : paraplégiques, non-voyants et mal-voyants, infirmes moteurs cérébraux. Cette activité peut être pratiquée soit sous forme de loisir, soit à des fins médicales (rééducation). En compétition, l’équitation est associée à 5 épreuves : le dressage, le saut d’obstacles, la maniabilité, la reprise libre et l’attelage. Il existe des équipements adaptés standards pour les handicapés physiques. On peut par exemple adapter la selle et les rennes, ou utiliser un montoire pour se hisser sur le cheval.</description>
+    <links>
+      <link>http://fr.wikipedia.org/wiki/%C3%89quitation_handisport</link>
+      <link>http://www.handisport.org/content/competition/equitation.php</link>
+      <link>http://www.horsesport.org/</link>
+      <link>http://www.ouest-france.fr/actu/actuLocale_-Des-personnes-handicapees-decouvrent-l-equitation-_14118-avd-20120614-63042590_actuLocale.Htm</link>
+    </links>
+    <clubs>
+      <club>
+        <name>Equi Lib'</name>
+        <address>Gymnase la Haie Vigné – 135 rue de Bayeux – 14000 CAEN</address>
+        <phone>06.74.9247.82</phone>
+        <mail>equi.lib@akeonet.com</mail>
+      </club>
+      <club>
+        <name>Handi Equi Compet</name>
+        <logo>equicompet.gif</logo>
+        <address>28 rue Docteur Calmette – 92500 RUEIL MALMAISON</address>
+        <phone>06.07.45.44.35</phone>
+        <mail>contact@handiequicompet.fr</mail>
+        <website>www.handiequicompet.fr</website>
+      </club>
+    </clubs>
+  </sport>
+  <sport>
+    <title>Escrime</title>
+    <slug>Escrime</slug>
+    <description>Dans la version handi de ce sport, les adversaires sont assis dans un fauteuil fixé au sol. Ils tiennent d’une main leur arme, et de l’autre ils se cramponnent au fauteuil. La distance entre eux est déterminée par celui qui a le bras le plus court. Cette distance doit être calculée très précisément : les adversaires doivent être assez près pour pouvoir se toucher, mais également assez loin pour être forcés à se déplacer à l’aide de fentes et de retraites du corps, et permettre de déployer un bagage technique aussi important que celui des valides. Ils n’ont pas le droit de se lever, ni de se servir de leurs jambes. Les athlètes disposent d’un équipement d’escrime standard, auquel s’ajoute des protections supplémentaires pour les jambes. Ils peuvent également utiliser des bandes pour lier leur main avec leur arme, s’ils manquent de prise. L’épreuve peut être individuelle ou collective.</description>
+    <links>
+      <link>http://fr.wikipedia.org/wiki/Escrime_handisport</link>
+    </links>
+    <clubs>
+      <club>
+        <name>Touques Escrime</name>
+        <address>Mairie de Touques – 14800 TOUQUES</address>
+        <phone>02.31.87.53.66</phone>
+        <mail>ph.mussillon@orange.fr</mail>
+        <website>escrimetouques.over-blog.com</website>
+        <logo>touques-escrime.jpg</logo>
+      </club>
+    </clubs>
+  </sport>
+  <sport>
+    <title>Tennis de table</title>
+    <slug>tennisDeTable</slug>
+    <description>Les règles du tennis de table handisport sont quasiment identiques à celles du sport d’origine. La principale modification est l’obligation par le serveur, en simple, de délivrer son service de manière à ce que la balle ne sorte pas latéralement. Cette règle s’applique également au bénéfice du joueur en fauteuil roulant lorsqu’il joue contre un joueur debout, que celui-ci soit valide ou handicapé.
+
+		Le tennis de table handisport peut être pratiqué debout ou en fauteuil roulant. Les matchs peuvent se jouer en simple ou en double. Comme dans la plupart des autres handisports, les athlètes sont classés dans une catégorie en fonction de leur handicap : les joueurs des catégories 1 à 5 jouent en fauteuil roulant, tandis que ceux des catégories 6 à 10 jouent debout.</description>
+    <links>
+      <link>http://fr.wikipedia.org/wiki/Tennis_de_table_handisport</link>
+      <link>http://www.handisport.org/content/competition/tennis_table.php</link>
+      <link>http://www.tthandisport.org/</link>
+    </links>
+    <clubs>
+      <club>
+        <name>Amicale pongiste de ouistreham</name>
+        <logo>amicale-pongiste.jpg</logo>
+        <address>Salle Georges Cavelier – Avenue de la Redoute – 14150 OUISTREHAM</address>
+        <hours>Ouvert à tous Mercredi à partir de 20h
+				Adulte Loisirs Dimanche à partir de 10h</hours>
+        <phone>06.33.80.73.37</phone>
+        <mail>didierping@yahoo.fr</mail>
+        <website>http://www.klubasso.fr/accueil/accueil.php?idc=14S6</website>
+      </club>
+      <club>
+        <name>Bayard Argentan</name>
+        <logo>bayard-argentan-tt.jpg</logo>
+        <address>68 Route de Sées – 61200 ARGENTAN</address>
+        <phone>02.33.39.57.69</phone>
+        <phone>06.81.39.55.24</phone>
+        <mail>martin.emeric@wanadoo.fr</mail>
+        <website>bayardargentantt.wifeo.com</website>
+      </club>
+    </clubs>
+  </sport>
+  <sport>
+    <title>Tir à l’arc</title>
+    <slug>Tir-a-larc</slug>
+    <description>Les archers doivent envoyer leur flèche sur une cible de 122 cm de diamètre sur laquelle sont tracés dix cercles concentriques, à une distance de 70 m. Selon l’endroit où arrive la flèche, l’archer reçoit entre 0 et 10 points. Le nombre de points augmente quand la flèche se rapproche du centre de la cible. Les archers sont soit debout, avec éventuellement un appareil de soutien, soit en fauteuil roulant. Les épreuves sont individuelles ou par équipes de trois archers.
+
+Les archers malvoyants ou aveugles peuvent participer à des compétitions handisports de tir à l’arc. Le viseur, situé normalement sur l’arc, est remplacé par un peson posé sur le sol. L’archer touche le haut de ce peson avec sa main d’arc, ce qui permet de le guider vers le jaune. Il peut régler cette partie du peson en verticale et en horizontale. Tous les archers tirant dans cette catégorie portent un bandeau sur les yeux pour qu’ils soient dans les mêmes conditions de tir.</description>
+    <links>
+      <link>http://fr.wikipedia.org/wiki/Tir_%C3%A0_l%27arc_handisport</link>
+    </links>
+    <clubs>
+      <club>
+        <name>Arc club saint lois</name>
+        <manager>Carl Mender</manager>
+        <address>160 rue des Troènes – 50000 SAINT LÔ</address>
+        <phone>02.33.56.64.56</phone>
+        <mail>info@arcclubsaintlois.fr</mail>
+        <website>www.arcclubsaintlois.fr</website>
+        <logo>exemple-arc.jpg</logo>
+      </club>
+    </clubs>
+  </sport>
+</sports>

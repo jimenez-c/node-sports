@@ -1,0 +1,32 @@
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<title><%= title %></title>
+		<link rel="stylesheet"  type="text/css" href="/css/style.css" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="page">
+				<div id="page-bgtop">
+					<div id="page-bgbtm">
+						<div id="content">
+							<%- content %>
+							<div style="clear: both;"></div>
+						</div>
+
+						<div id="sidebar">
+							<div id="logo">
+								<h1><a href="/">Handisport Caen </a></h1>
+							</div>
+							<div class="menu ajout">
+								<a id="add-sport" href="/update">Ajouter un sport</a>
+							</div>
+							<%- menu %>
+						</div>
+						<div style="clear: both;"></div>					
+					</div>
+				</div>
+			</div>
+		</div>	
+	</body>
+</html>

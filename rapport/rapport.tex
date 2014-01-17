@@ -1,0 +1,334 @@
+\documentclass{report}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{ucs, graphicx, fancyhdr, fancyvrb, hyperref, lastpage, tikz}
+
+% Package pour mettre en forme le titre d'un chapitre
+\usepackage[raggedright]{titlesec}
+\usepackage{blindtext}
+
+% Faire un arbre (visualisation de dossier) en latex
+\usetikzlibrary{trees}
+
+% Virer la bordure rouge sur les liens du sommaire.
+\hypersetup{pdfborder = {0 0 0}}
+
+% Définir une hauteur pour le header
+\setlength{\headheight}{60.45229pt}
+
+% Titre des chapitres de la forme => 1 Titre
+\titleformat{\chapter}[hang]{\bf\huge}{\thechapter}{2pc}{}
+
+\begin{document}
+
+% Redéfinition du header par défaut
+\pagestyle{fancy}
+\renewcommand\headrulewidth{.2pt}
+\fancyhead[L]{\includegraphics[scale=.75]{images/unicaen.png}}
+\fancyhead[R]{Devoir NodeJs: développer un mini wiki}
+\renewcommand\footrulewidth{.2pt}
+\fancyfoot[L]{\leftmark}
+\fancyfoot[C]{}
+\fancyfoot[R]{\textbf{\thepage/\pageref{LastPage}}}
+
+% Rédéfinition de la page de garde
+\begin{titlepage}
+\centering
+  {\large \textsc{Université de Caen Basse Normandie}}\\
+  \textsc{Système - François Rioult}\\
+\vspace{1cm}
+  \includegraphics[width=0.30\textwidth]{images/unicaen.png}
+\vfill
+   {\LARGE \textbf{Devoir NodeJs: développer un mini wiki}} \\
+\vspace{2em}
+	{\large Cyril \bsc{JIMENEZ} et Alizée \bsc{TIERCERY}} \\
+\vspace{1cm}
+  {\large\textbf{\today}}\\
+\vfill
+\end{titlepage}
+
+% Titre du sommaire
+\renewcommand{\contentsname}{Sommaire}
+\tableofcontents
+\thispagestyle{fancy}
+
+
+%%
+% ------------------------------------------------------------------
+% Introduction
+% ------------------------------------------------------------------
+%
+%%
+\chapter{Introduction}
+\thispagestyle{fancy}
+	\paragraph{}{
+		Il s’agit de développer une application en node js qui se comporterait comme un wiki. On pourra ajouter, modifier ou supprimer des pages. On traite des donnes XML qui agissent comme base de données. Nous avons choisi d’utiliser comme sujet pour remplir le wiki, les clubs sportifs adaptés à Caen pour accueillir les personnes handicapées.
+	}
+
+
+%%
+% -------------------------------------------------------------------------
+% Architecture
+% -------------------------------------------------------------------------
+%
+%%
+\chapter{Architecture}
+\thispagestyle{fancy}
+	\tikzstyle{every node}=[thick,anchor=west]
+	\tikzstyle{selected}=[fill=blue!10]
+	\tikzstyle{parent}=[draw=yellow,fill=yellow!30]
+	\tikzstyle{optional}=[dashed,fill=gray!50]
+	\begin{tikzpicture}[
+	  grow via three points={one child at (0.5,-0.7) and
+	  two children at (0.5,-0.7) and (0.5,-1.25)},
+	  edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+	  \node [parent] { appli }
+		child { node {app.js}}
+		child { node [selected] {css}
+			child { node [selected] {images}}
+			child { node {style.css}}
+		}
+		child [missing] {}
+		child [missing] {}
+		child [missing] {}
+		child { node [selected] {db}
+			child { node {handisport.xml}}
+		}
+		child [missing] {}
+		child { node [selected] {logos}
+			child { node {amicale-pongiste.jpg}}
+			child { node {arc-st-lo.jpg}}
+			child { node {...}}
+		}
+		child [missing] {}
+		child [missing] {}
+		child [missing] {}
+		child { node [selected] {node\_modules}
+			child { node [selected] {basex}}
+			child { node [selected] {debug}}
+			child { node [selected] {ejs}}
+			child { node [selected] {express}}
+			child { node [selected] {node\_xslt}}
+			child { node [selected] {db.js}}
+		}
+		child [missing] {}
+		child [missing] {}
+		child [missing] {}
+		child [missing] {}
+		child [missing] {}
+		child [missing] {}
+		child { node [selected] {views}
+			child { node {page.ejs}}
+		}
+		child [missing] {}
+		child { node [selected] {xslt}
+			child { node {welcome.xslt}}
+			child { node {menu.xslt}}
+			child { node {update.xslt}}
+			child { node {sport.xslt}}
+		};
+	\end{tikzpicture}
+
+
+	\paragraph{}{
+		Nous avons un script js principal ‘app.js’ qui lance le serveur web. Le dossier \textbf{node\_modules} contient tous les modules nécessaires pour l’application. Nous avons aussi créé notre propre module « db.js » qui s’occupe de faire des requêtes sur le fichier XML.  Dans le dossier \textbf{xslt}, on y met les fichiers xslt pour l’affichage, qui permettent de transformer le xml en html. Dans \textbf{views}, les deux scripts d’ajout et de modification. Un dossier \textbf{CSS} pour le style, et un dossier \textbf{db} qui contient le fichier XML qui nous sert de base de données.
+	}
+
+
+
+%%
+% ------------------------------------------------------------------
+% Modules
+% ------------------------------------------------------------------
+%
+%%
+\chapter{Modules}
+\thispagestyle{fancy}
+	\paragraph{}{
+		Nous avons téléchargés plusieurs modules nécessaires pour notre site : \\
+
+		\begin{itemize}
+			\item \textbf{Express}: framework node pour gérer le routing notamment.
+			\item \textbf{Debug}: permet d’afficher des objets de façon détaillée (équivalent d’un var\_dump en PHP).
+			\item \textbf{Node\_xslt}: permet de transformer le XML issu des requêtes en BDD directement en HTML.
+			\item \textbf{Ejs}: moteur de template pour node. Permet de faire des inclusions dynamiques, ce qui semble impossible en XSLT.
+			\item \textbf{Basex}: connexion à la BDD et requêtes Xquery.
+
+		\end{itemize}
+	}
+
+
+%%
+% -------------------------------------------------------------------------
+% Constitution du fichier XML « handisport.xml »
+% -------------------------------------------------------------------------
+%
+%%
+\chapter{Constitution du fichier XML « handisport.xml »}
+\thispagestyle{fancy}
+	\paragraph{}{
+		Voilà comment est formé notre fichier xml: \\
+
+\begin{verbatim}
+<sports>
+  <sport>
+	<title>Cyclisme</title>
+	<slug>cyclisme</slug>
+	<description>A la fin…</description>
+	<links>
+	  <link>http://fr.wikipedia.org/wiki/Cyclisme_handisport</link>
+	</links>
+	<clubs>
+	  <club>
+		<name>Amicale cycliste de Bayeux</name>
+		<address>Place de la gare – 14400 BAYEUX</address>
+		<phone>06.74.64.43.03</phone>
+		<mail>michel.david11@orange.fr</mail>
+		<website>www.amicale-cycliste-bayeux.fr</website>
+	  </club>
+	  <club>
+		<name>Sport Handi Nature</name>
+		<address>135 rue de Bayeux – 14000 CAEN</address>
+		<hours>Loisir : Le samedi après-midi de 13h30 à 17h30
+				Horaires Compétition En semaine suivant les
+  </hours>
+		<phone>06.74.66.34.50</phone>
+		<mail>gaby.bourgault@gmail.com</mail>
+		<website>www.sporthandinature.fr</website>
+	  </club>
+	</clubs>
+  </sport>
+
+  <sport>
+	 ……………
+  </sport>
+</sports>
+\end{verbatim}
+	}
+
+
+
+
+%%
+% -------------------------------------------------------------------------
+% Fichier app.js
+% -------------------------------------------------------------------------
+%
+%%
+\chapter{Fichier app.js}
+\thispagestyle{fancy}
+	\paragraph{}{
+		Ce script joue le rôle de contrôleur : il intercepte les requêtes http, interroge la base de données et appelle la vue correspondante (généralement sous la forme d’un fichier XSLT). Il crée le HTML résultant de la transformation du XML, et le met dans une variable qui sera transmise au squelette de la page en EJS. \\
+		Le code simplifié :
+
+\begin{Verbatim}
+// importation des modules
+…
+
+// routage
+app.get(‘/mon-url’, function(req, res) {
+	db.requete(params, function(réponse en XML) {
+		var content = transform(‘nom-de-la-feuille-xslt’, réponse en XML) ;
+		// content contient le HTML
+		end(‘titre de la page’, content, res) ;
+	}) ;
+}) ;
+
+// transforme le XML passé en paramètre à l’aide de la feuille XSLT
+// passée en paramètre
+function transform(‘nom’, xml) {
+…
+}
+
+// envoie la réponse finale au client
+function end(titre de la page, content, res) {
+	// récupère la liste des sports pour écrire le menu, présent sur
+	// toutes les pages
+	db.getList(function(list) {
+		var menu = transform(‘menu.xslt’, list) ;
+		// nous renvoyons toujours le même squelette de page,
+		// seul le contenu change
+		res.render(‘page.ejs’, { titre de la page, content, menu}) ;
+	}) ;
+}
+\end{Verbatim}
+	}
+
+
+
+
+%%
+% -------------------------------------------------------------------------
+% Fichier db.js
+% -------------------------------------------------------------------------
+%
+%%
+\chapter{Fichier db.js}
+\thispagestyle{fancy}
+	\paragraph{}{
+		Fonctions principales, requêtes XQuery :\\
+
+		\begin{itemize}
+			\item \textbf{getList()}: récupère la liste des sports (le titre)
+			\item \textbf{getSport()}: récupère les données du sport sélectionné
+			\item \textbf{deleteSport()}: supprime le sport sélectionné (le supprime dans basex et dans le fichier xml)
+			\item \textbf{addSport()}: rajoute en base et dans le fichier XML un sport. Notre formulaire d’ajout est simple, nous n’avons pas géré la possibilité d’entrer plusieurs clubs ou plusieurs url pour un même sport.
+		\end{itemize}
+	}
+
+	\paragraph{}{
+		Exemple de code: \\
+
+\begin{Verbatim}
+var getList = function(callback) {
+	var input = "<liste>{ requête Xquery } </liste>";
+	var query = basex.query(input);
+
+	query.results(function(err, reply) {
+		callback(reply.result);
+	});
+}
+\end{Verbatim}
+	}
+
+
+
+%%
+% -------------------------------------------------------------------------
+% Difficultés rencontrées
+% -------------------------------------------------------------------------
+%
+%%
+\chapter{Difficultés rencontrées}
+\thispagestyle{fancy}
+	\paragraph{}{
+		Une des plus grandes difficultés que nous avons eues est que les requêtes à la BDD sont faites de façon asynchrone. Concrètement, si on essaye de mettre un « return reply.result » à la place du «  callback(reply.result) », cela ne fonctionne pas car la fonction anonyme passée en paramètre de query.results est exécutée seulement à la réception du résultat de la requête, soit quelques millisecondes plus tard. Pendant ce temps, l’exécution de la fonction getList se poursuit, et arrive à la fin sans rien renvoyer. Le return que l’on aurait mis ne servirait à rien car d’une part il arriverait trop tard, et d’autre part il est encapsulé dans une fonction anonyme donc impossible à récupérer.\\
+		Pour résoudre ce problème, nous utilisons le principe des callbacks, très utilisés dans node. Il s’agit simplement de passer en paramètre à getList une fonction, qui sera exécutée à la réception des résultats.
+	}
+
+	\paragraph{}{
+		Autre problème : lors d’une requête qui met à jour la BDD (insertion, suppression, modification), le fichier XML d’origine n’est pas modifié, seule la représentation de la base dans la mémoire du serveur basex l’est. Il fallait simplement utiliser la fonction export après chaque requête pour corriger ce problème, mais nous avons mis du temps pour trouver la solution.
+	}
+
+
+
+%%
+% -------------------------------------------------------------------------
+% Fonctionnalités supplémentaires
+% -------------------------------------------------------------------------
+%
+%%
+\chapter{Fonctionnalités supplémentaires}
+\thispagestyle{fancy}
+	\paragraph{}{
+		Nous avons également réalisé un upload d’image avec node, pour les logos des clubs. Enfin, nous avons utilisé un module pour générer automatiquement les slugs (les identifiants uniques de chaque sport que l’on peut transmettre dans l’url) à partir du nom du sport.
+	}
+
+
+
+
+
+
+\end{document}
